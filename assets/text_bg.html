@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="text.css">
+	<title>Weather App</title>
+	
+</head>
+<body>
+	<div class="wrapper"><h1>Weather Update</h1></div>
+	<div class="col-md-8 center app-cont">
+	<div class="searchBox" id="searchBox">
+			<i class="fa fa-search icon"></i> 
+			<input type="text" id="input-box" class="input-box" placeholder="Enter Your Location..." autocomplete="off">
+
+	</div>
+
+	<div class="weather-body">
+		<div class="row">
+		<div class="col-md-4 adj weather-status">
+			<div class="mtemp" id="mtemp">34&deg;C (min) / 34&deg;C (max)</div>
+			<div class ="status" id="status">Clear</div>
+			<div class ="windspeed" id="windspeed"> Wind Speed:5km/h</div>
+			<div class ="humidity" id="humidity"> Humidity:</div>
+			<div class="img"><img id="icon" src=""/></div>
+		</div>
+		<div class="col-md-4  location-details">
+			<div class ="city" id="city">Belgharia,IN</div>
+			<div class="date" id="date">13th September(Sunday), 2020</div>
+			<div class="temp" id="temp">34&deg;C</div>
+			<div class="feeltemp" id="feeltemp">34&deg;C</div>
+		</div>
+
+		
+		</div>
+		<footer>&copy; Copyright 2020 Sawon Bhattacharya</footer>
+	</div>
+	
+	</div>
+
+	<script src="jscript.js"></script>	
+</body>
+</html>
+
+

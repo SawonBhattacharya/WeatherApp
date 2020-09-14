@@ -15,6 +15,7 @@ searchInputBox.addEventListener('keypress',(event)=>{
 		console.log(searchInputBox.value);
 		getWeatherReport(searchInputBox.value);
 		document.querySelector('.weather-body').style.display="block";
+		
 	}
 });
 
@@ -30,72 +31,70 @@ function getWeatherReport(city) {
 
 //Show Weather Report
 function showWeatherReport(weather){
-	
-	if(weather.cod==200){
-
-	
-	
-	let city = document.getElementById('city');
-	city.innerText=`${weather.name},${weather.sys.country}`;
-
-	let temperature = document.getElementById('temp');
-	temperature.innerHTML=`${Math.round(weather.main.temp)}&degC`;
-
-	let feelLike=document.getElementById('feeltemp');
-	feelLike.innerHTML=`Feel_like: ${Math.floor(weather.main.feels_like)}&degC`;
-
-	let minMaxTemp=document.getElementById('mtemp');
-	minMaxTemp.innerHTML=`${Math.floor(weather.main.temp_min)}&degC (min)/${Math.floor(weather.main.temp_max)}&degC (max)`;
-
-	let weatherType=document.getElementById('status');
-	weatherType.innerText=`Status: ${weather.weather[0].main}`;
-
-	let windSpeed=document.getElementById('windspeed');
-	windSpeed.innerHTML=`Wind Speed: ${Math.floor(weather.wind.speed)}km/h`;
-
-	let humidity=document.getElementById('humidity');
-	humidity.innerHTML=`Humidity: ${Math.floor(weather.main.humidity)}%`;
-
-	let weatherIcon=document.getElementById('icon');
-	weatherIcon.src=weatherApi.imageurl+weather.weather[0].icon+".png";
-	
-	
-	let date=document.getElementById('date');
-	let todayDate=new Date();
-	date.innerText=dateManage(todayDate);
-
-	console.log(weatherType.textContent);
-	if(weather.weather[0].main == 'Clear'){
-		document.body.style.backgroundImage = "url(assets/clear.jpg)";
+	console.log(weather.cod);
+	if(weather.cod!=200){
+		document.querySelector('.weather-body').style.display="none";
+		document.querySelector('.error').style.display="block";
+		document.querySelector('.foot').style.display="block";
 	}
-	else if(weather.weather[0].main == 'Clouds'){
-		document.body.style.backgroundImage = "url(assets/cloudy.jpg)";
-	}
-	else if(weather.weather[0].main == 'Drizzle'){
-		document.body.style.backgroundImage = "url(assets/drizzle.jpeg)";
-	}
-	else if(weather.weather[0].main == 'Haze'){
-		document.body.style.backgroundImage = "url(assets/haze.jpg)";
-	}
-	else if(weather.weather[0].main == 'Mist'){
-		document.body.style.backgroundImage = "url(assets/Mist.jpg)";
-	}
-	else if(weather.weather[0].main == 'Rain'){
-		document.body.style.backgroundImage = "url(assets/rainy.jpg)";
-	}
-	else if(weather.weather[0].main == 'Snow'){
-		document.body.style.backgroundImage = "url(assets/snowy.jpg)";
-	}
-	else if(weather.weather[0].main == 'Thunderstorm'){
-		document.body.style.backgroundImage = "url(assets/Thunderstorm.jpeg)";
-	}
+	else{
+		let city = document.getElementById('city');
+		city.innerText=`${weather.name},${weather.sys.country}`;
 
-	document.getElementById('.error').style.display="none";
-}
-else{
-	addalert("Can't find location");
+		let temperature = document.getElementById('temp');
+		temperature.innerHTML=`${Math.round(weather.main.temp)}&degC`;
 
-}
+		let feelLike=document.getElementById('feeltemp');
+		feelLike.innerHTML=`Feel_like: ${Math.floor(weather.main.feels_like)}&degC`;
+
+		let minMaxTemp=document.getElementById('mtemp');
+		minMaxTemp.innerHTML=`${Math.floor(weather.main.temp_min)}&degC (min)/${Math.floor(weather.main.temp_max)}&degC (max)`;
+
+		let weatherType=document.getElementById('status');
+		weatherType.innerText=`Status: ${weather.weather[0].main}`;
+
+		let windSpeed=document.getElementById('windspeed');
+		windSpeed.innerHTML=`Wind Speed: ${Math.floor(weather.wind.speed)}km/h`;
+
+		let humidity=document.getElementById('humidity');
+		humidity.innerHTML=`Humidity: ${Math.floor(weather.main.humidity)}%`;
+
+		let weatherIcon=document.getElementById('icon');
+		weatherIcon.src=weatherApi.imageurl+weather.weather[0].icon+".png";
+		
+		
+		let date=document.getElementById('date');
+		let todayDate=new Date();
+		date.innerText=dateManage(todayDate);
+
+		console.log(weatherType.textContent);
+		if(weather.weather[0].main == 'Clear'){
+			document.body.style.backgroundImage = "url(assets/clear.jpg)";
+		}
+		else if(weather.weather[0].main == 'Clouds'){
+			document.body.style.backgroundImage = "url(assets/cloudy.jpg)";
+		}
+		else if(weather.weather[0].main == 'Drizzle'){
+			document.body.style.backgroundImage = "url(assets/drizzle.jpeg)";
+		}
+		else if(weather.weather[0].main == 'Haze'){
+			document.body.style.backgroundImage = "url(assets/haze.jpg)";
+		}
+		else if(weather.weather[0].main == 'Mist'){
+			document.body.style.backgroundImage = "url(assets/Mist.jpg)";
+		}
+		else if(weather.weather[0].main == 'Rain'){
+			document.body.style.backgroundImage = "url(assets/rainy.jpg)";
+		}
+		else if(weather.weather[0].main == 'Snow'){
+			document.body.style.backgroundImage = "url(assets/snowy.jpg)";
+		}
+		else if(weather.weather[0].main == 'Thunderstorm'){
+			document.body.style.backgroundImage = "url(assets/Thunderstorm.jpeg)";
+		}
+
+		
+	}
 
 
 }

@@ -20,7 +20,7 @@
 
 	</div>
 
-	<div class="weather-body" id="weather-body">
+	<div class="weather-body" id="we">
 		<div class="row">
 		<div class="col-md-4 adj weather-status">
 			<div class="mtemp" id="mtemp"></div>
@@ -35,12 +35,16 @@
 			<div class="temp" id="temp"></div>
 			<div class="feeltemp" id="feeltemp"></div>
 		</div>
-		<caption class="error" id="error">Can't find your location.<br> Please try again.</caption>
-		
+		<div class="col col-md-12" style="position: fixed;top: 56%;left: 23%;">
+			<footer class="foot1" style="text-align: center;">&copy; Copyright 2020 Sawon Bhattacharya</footer>
 		</div>
+		</div>
+		
+	</div>
+	<div style="display: none;" class="error" id="error">
+		<caption>Can't find your location.<br> Please try again.</caption>
 		<footer>&copy; Copyright 2020 Sawon Bhattacharya</footer>
 	</div>
-	
 	</div>
 
 	<script src="jscript.js"></script>	

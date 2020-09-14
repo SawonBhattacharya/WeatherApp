@@ -155,13 +155,14 @@ input[type=text]:focus {
 	font-weight: bold;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	padding:60px auto ;
-	margin-left: 80px;
+	margin-left: 70px;
+  font-size: 15pt;
 }
 
 .weather-status{
 	
-	padding:60px auto ;
-	margin-left: 30px;
+	padding:85px auto ;
+	margin-left: 50px;
 }
 
 .temp{
@@ -172,17 +173,46 @@ input[type=text]:focus {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .mtemp,.feeltemp,.humidity, .status , .windspeed{
-	font-size: 12pt;
+	font-size: 15pt;
 	font-weight:600;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 
 }
-.foot{
+.foot1{
 	align-content: center;
 	width: 50%;
-	background-color: rgb(5,20,60,0.7);
+	text-align: center;
+  padding-left: 50px;
 }
 footer{
 	margin-top: 35px;
 	color: rgba(205,195,255,1);
+  position: center;
+}
+
+.error{
+  display: none;
+  padding:20px;
+  width: 100%
+  border-radius: 10px;
+  position: center;
+  text-align: center;
+  background-color:rgba(2,22,15,0.3); 
+  color: rgba(205,195,255,1);
+  font-size: 15pt;
+  font-weight:600;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.foot{
+  display: none;
+  padding:20px;
+  width: 100%
+  border-radius: 10px;
+  position: center;
+  text-align: center;
+  background-color:rgba(2,22,15,0.3); 
+  font-size: 15pt;
+  font-weight:600;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }

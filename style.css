@@ -181,7 +181,8 @@ input[type=text]:focus {
 	align-content: center;
 	width: 50%;
 	text-align: center;
-  padding-left: 50px;
+  	padding-left: 50px;
+	padding-top: 60px;
 }
 footer{
 	margin-top: 35px;

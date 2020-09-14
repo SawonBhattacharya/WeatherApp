@@ -15,7 +15,7 @@ searchInputBox.addEventListener('keypress',(event)=>{
 		console.log(searchInputBox.value);
 		getWeatherReport(searchInputBox.value);
 		document.querySelector('.weather-body').style.display="block";
-		
+		document.querySelector('.error').style.display="none";
 	}
 });
 
@@ -35,7 +35,7 @@ function showWeatherReport(weather){
 	if(weather.cod!=200){
 		document.querySelector('.weather-body').style.display="none";
 		document.querySelector('.error').style.display="block";
-		document.querySelector('.foot').style.display="block";
+		
 	}
 	else{
 		let city = document.getElementById('city');

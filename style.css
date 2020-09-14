@@ -12,7 +12,7 @@ html, body {
 body{
 
 	background:linear-gradient(rgba(6,7,10,.3), rgba(6,5,5,.9)),
-    url(assets/home.jpg) no-repeat center center fixed; 
+    url(../assets/home.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;

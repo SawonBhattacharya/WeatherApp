@@ -3,7 +3,7 @@
 const weatherApi={
 	key:"72bf0b477b905503727d7113d54031c9",
 	baseurl:"http://api.openweathermap.org/data/2.5/weather",
-	imageurl:" http://openweathermap.org/img/wn/"
+	imageurl:"http://openweathermap.org/img/wn/"
 }
 
 const searchInputBox=document.getElementById('input-box');

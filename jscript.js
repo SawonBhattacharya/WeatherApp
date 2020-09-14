@@ -30,8 +30,11 @@ function getWeatherReport(city) {
 
 //Show Weather Report
 function showWeatherReport(weather){
-	console.log(weather);
+	
+	if(weather.cod==200){
 
+	
+	
 	let city = document.getElementById('city');
 	city.innerText=`${weather.name},${weather.sys.country}`;
 
@@ -55,7 +58,7 @@ function showWeatherReport(weather){
 
 	let weatherIcon=document.getElementById('icon');
 	weatherIcon.src=weatherApi.imageurl+weather.weather[0].icon+".png";
-	console.log(weatherIcon.src)
+	
 	
 	let date=document.getElementById('date');
 	let todayDate=new Date();
@@ -86,6 +89,13 @@ function showWeatherReport(weather){
 	else if(weather.weather[0].main == 'Thunderstorm'){
 		document.body.style.backgroundImage = "url(assets/Thunderstorm.jpeg)";
 	}
+
+	document.getElementById('.error').style.display="none";
+}
+else{
+	addalert("Can't find location");
+
+}
 
 
 }
